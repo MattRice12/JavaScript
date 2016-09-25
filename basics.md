@@ -58,6 +58,10 @@ lets #=> ["a", "b", "yay", ...]
 
 lets.push("f") #=> appends "f"
 
+.push() --> adds to the end
+.pop() --> takes from the end
+.shift() --> takes from the start
+
 _______________________________________
 ## Loops in Arrays
 

@@ -5,7 +5,7 @@
   E.g., diffOfSquares(1, 2);
 
         function diffOfSquares(a, b) {
-          return (a*a - b*b);
+          return (a * a - b * b);
         }
 
 
@@ -16,10 +16,27 @@
   You cannot use the function before you create it (they are not hoisted).
 
   E.g., var diff = function(a, b) {
-          return (a*a - b*b);
+          return (a * a - b * b);
         };
 
         diff(1, 2);
 
-#Anonymous Functions
+# Anonymous Functions
 don't need function names when you assign function to a variable
+
+
+## Storing Functions in an Arrays
+  var puzzlers = [
+    function(input){
+      return (3 * input - 8);
+    },
+    function(input){
+      return ((input + 2) * (input + 2) * (input + 2));
+    },
+    function(input){
+      return ((input * input) - 9);
+    },
+    function(input){
+      return (input % 4);
+    }
+  ];

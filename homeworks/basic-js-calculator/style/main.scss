@@ -1,0 +1,31 @@
+body {
+  background: black;
+}
+
+.calc {
+  border: 2px solid white;
+  width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  background: gray;
+}
+
+.output-container {
+  background: white;
+  width: 150px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.input-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+}

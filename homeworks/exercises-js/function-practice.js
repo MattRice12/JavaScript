@@ -5,19 +5,20 @@ window.onload = function() {
   var input1;
   var input2;
   var input3;
+  var input4;
 
   document.body.addEventListener('click', function(e) {
     input1 = document.querySelector("[type=radio]:checked ~ .calculator #num1");
     input2 = document.querySelector("[type=radio]:checked ~ .calculator #num2");
-    input3 = document.querySelector("#num3");
+    input3 = document.querySelector("[type=radio]:checked ~ .calculator #num3");
+    input4 = document.querySelector("[type=radio]:checked ~ .calculator #num4");
     opperator = document.querySelector("[type=radio]:checked ~ label").id
-
-    input3.style.display = (e.target.id === "lab1") ? "none" : "initial";
 
     if (e.target.id === "calc") {
       calc(opperator);
     }
   })
+
 
   function sum(first, second) {
     output = parseInt(first) + parseInt(second);
@@ -27,11 +28,35 @@ window.onload = function() {
     output = (parseInt(first) + parseInt(second) + parseInt(third)) / 3;
   }
 
+  function getLength(first) {
+    output = first.length  + " characters long.";
+  }
+
+  function greaterThan(first, second) {
+    output = (parseInt(first) > parseInt(second))
+  }
+
+  function greet(first) {
+    output = "Hello " + first + "!"
+  }
+
+  function madLib(first, second, third, fourth) {
+    output = "The " + first + " " + second + " ran to the store to get a large " + third + " and " + fourth + " Jimbo over the head with it."
+  }
+
   function calc(opperator) {
     if (opperator === "lab1") {
       sum(input1.value, input2.value)
     } else if (opperator === "lab2") {
       avg(input1.value, input2.value, input3.value)
+    } else if (opperator === "lab3") {
+      getLength(input1.value)
+    } else if (opperator === "lab4") {
+      greaterThan(input1.value, input2.value)
+    } else if (opperator === "lab5") {
+      greet(input1.value)
+    } else if (opperator === "lab6") {
+      madLib(input1.value, input2.value, input3.value, input4.value)
     }
     result.innerHTML = output
   }

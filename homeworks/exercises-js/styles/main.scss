@@ -25,6 +25,18 @@
   #lab2 {
     left: 97px;
   }
+  #lab3 {
+    left: 141px;
+  }
+  #lab4 {
+    left: 217px;
+  }
+  #lab5 {
+    left: 352px;
+  }
+  #lab6 {
+    left: 418px;
+  }
   & [type=radio] {
     display: none;
     &:not(:checked) ~ .calculator {

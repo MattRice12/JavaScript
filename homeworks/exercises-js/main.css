@@ -20,6 +20,14 @@
     left: 50px; }
   .tab-container #lab2 {
     left: 97px; }
+  .tab-container #lab3 {
+    left: 141px; }
+  .tab-container #lab4 {
+    left: 217px; }
+  .tab-container #lab5 {
+    left: 352px; }
+  .tab-container #lab6 {
+    left: 418px; }
   .tab-container [type=radio] {
     display: none; }
     .tab-container [type=radio]:not(:checked) ~ .calculator {

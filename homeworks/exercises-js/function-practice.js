@@ -1,30 +1,18 @@
-// Q1
-// Write a function called `sum` that takes two
-// parameters and returns the sum of those 2 numbers.
-
 window.onload = function() {
   var result = document.querySelector("#output")
   var output;
-  var opperator = "lab1";
-
-  var sum1;
-  var sum2;
-
-  var avg1;
-  var avg2;
-  var avg3;
+  var opperator;
+  var input1;
+  var input2;
+  var input3;
 
   document.body.addEventListener('click', function(e) {
-    sum1 = document.querySelector("#sum1").value
-    sum2 = document.querySelector("#sum2").value
+    input1 = document.querySelector("[type=radio]:checked ~ .calculator #num1");
+    input2 = document.querySelector("[type=radio]:checked ~ .calculator #num2");
+    input3 = document.querySelector("#num3");
+    opperator = document.querySelector("[type=radio]:checked ~ label").id
 
-    avg1 = document.querySelector("#avg1").value
-    avg2 = document.querySelector("#avg2").value
-    avg3 = document.querySelector("#avg3").value
-
-    if (e.target.tagName === "LABEL") {
-      opperator = e.target.id
-    }
+    input3.style.display = (e.target.id === "lab1") ? "none" : "initial";
 
     if (e.target.id === "calc") {
       calc(opperator);
@@ -36,20 +24,23 @@ window.onload = function() {
   }
 
   function avg(first, second, third) {
-    output = (parseInt(first) + parseInt(second) + parseInt(third)) / 2;
+    output = (parseInt(first) + parseInt(second) + parseInt(third)) / 3;
   }
 
   function calc(opperator) {
     if (opperator === "lab1") {
-      sum(sum1, sum2)
+      sum(input1.value, input2.value)
     } else if (opperator === "lab2") {
-      avg(avg1, avg2, avg3)
+      avg(input1.value, input2.value, input3.value)
     }
     result.innerHTML = output
   }
 }
 
 
+// Q1
+// Write a function called `sum` that takes two
+// parameters and returns the sum of those 2 numbers.
 
 
 // Q2
@@ -57,13 +48,9 @@ window.onload = function() {
 // and returns the average of those 3 numbers.
 
 
-
-
 // Q3
 // Write a function called `getLength` that takes one
 // parameter (a string) and returns the length
-
-
 
 
 // Q4
@@ -73,15 +60,11 @@ window.onload = function() {
 // the function should return `false`.
 
 
-
-
 // Q5
 // Write a function called `greet` that takes a
 // single parameter and returns a string that
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
-
-
 
 
 // Q6

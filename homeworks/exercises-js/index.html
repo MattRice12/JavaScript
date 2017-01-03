@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" media="screen">
+    <link rel="stylesheet" href="main.css" media="screen">
+    <script src="function-practice.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="tab-container">
+      <div class="tab">
+        <input type="radio" id="tab1" name="main-tabs" checked>
+        <label id="lab1" for="tab1">SUM</label>
+        <div class="calculator">
+          <input id="sum1" value="1">
+          <input id="sum2" value="2">
+        </div>
+      </div>
+
+      <div class="tab">
+        <input type="radio" id="tab2" name="main-tabs">
+        <label id="lab2" for="tab2">AVG</label>
+        <div class="calculator">
+          <input id="avg1" value="1">
+          <input id="avg2" value="2">
+          <input id="avg3" value="19">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="result-container">
+      <div class="calculate">
+        <button id="calc">Calculate</button>
+      </div>
+
+      <div class="output">
+        Result: <span id="output">0</span>
+      </div>
+    </div>
+
+  </body>
+</html>

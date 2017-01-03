@@ -1,0 +1,43 @@
+.tab-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid black;
+  z-index: 0;
+  padding: 20px 5% 0 50px; }
+  .tab-container .tab {
+    margin-bottom: 20px; }
+  .tab-container label {
+    width: 100px;
+    position: absolute;
+    border: 1px solid gray;
+    border-bottom: 0;
+    box-sizing: border-box;
+    width: auto;
+    padding: 0 5px; }
+    .tab-container label:hover {
+      cursor: pointer; }
+  .tab-container #lab1 {
+    left: 50px; }
+  .tab-container #lab2 {
+    left: 97px; }
+  .tab-container [type=radio] {
+    display: none; }
+    .tab-container [type=radio]:not(:checked) ~ .calculator {
+      display: none; }
+    .tab-container [type=radio]:checked ~ .calcuator {
+      display: block; }
+    .tab-container [type=radio]:checked ~ label {
+      border-top: 2px solid black; }
+  .tab-container .calculator {
+    margin-top: 20px; }
+
+.output {
+  margin-left: 20px; }
+
+.result-container {
+  display: flex;
+  width: 100%;
+  z-index: 0;
+  padding: 20px 5% 0 50px; }
+
+/*# sourceMappingURL=main.css.map */

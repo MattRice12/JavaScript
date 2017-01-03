@@ -1,0 +1,54 @@
+.tab-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid black;
+  z-index: 0;
+  padding: 20px 5% 0 50px;
+  .tab {
+    margin-bottom: 20px;
+  }
+  label {
+    width: 100px;
+    position: absolute;
+    border: 1px solid gray;
+    border-bottom: 0;
+    box-sizing: border-box;
+    width: auto;
+    padding: 0 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #lab1 {
+    left: 50px;
+  }
+  #lab2 {
+    left: 97px;
+  }
+  & [type=radio] {
+    display: none;
+    &:not(:checked) ~ .calculator {
+      display: none;
+    }
+    &:checked ~ .calcuator {
+      display: block;
+    }
+    &:checked ~ label {
+      border-top: 2px solid black;
+    }
+  }
+  .calculator {
+    margin-top: 20px;
+  }
+}
+
+.output {
+  margin-left: 20px;
+}
+
+.result-container {
+  display: flex;
+  width: 100%;
+  z-index: 0;
+  padding: 20px 5% 0 50px;
+}

@@ -34,10 +34,10 @@ window.onload = function () {
   }
 
   function mathMatics(num){
-    var opp = ["+", "-", "*", '/']
-    opp.forEach(function (o) {
-      if (input.includes(o) && num.length === 2) {
-        switch(o) {
+    var opperators = ["+", "-", "*", '/']
+    opperators.forEach(function (opperator) {
+      if (input.includes(opperator) && num.length === 2) {
+        switch(opperator) {
           case "+":
             output = parseInt(num[0]) + parseInt(num[1])
             break
